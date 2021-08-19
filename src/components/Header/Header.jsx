@@ -7,7 +7,7 @@ import {
 } from "./Header.elemets";
 import Logo from "../../assets/Logo.png";
 
-export default function Header() {
+export function Header() {
   return (
     <Nav>
       <NavBarContainer>
@@ -17,7 +17,7 @@ export default function Header() {
             <NavLink to="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/favoritas">Musicas Favoritas</NavLink>
+            <NavLink to="/favoritas">Músicas Favoritas</NavLink>
           </NavItem>
         </NavMenu>
       </NavBarContainer>

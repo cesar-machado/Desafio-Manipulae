@@ -1,13 +1,18 @@
-import Header from "../../components/Header/Header";
-import { Box, Input, Main } from "./Home.elements";
+import { Header } from "../../components/Header/Header";
+import { Tracks } from "../../components/Tracks/Tracks";
+import { Box, BoxInput, Input, Main } from "./Home.elements";
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <Header />
       <Main>
-        <Box>
+        <BoxInput>
           <Input type="text" placeholder="   Artistas, músicas ou álbuns." />
+        </BoxInput>
+        <h1>Top Músicas do Momento</h1>
+        <Box>
+          <Tracks />
         </Box>
       </Main>
     </>
