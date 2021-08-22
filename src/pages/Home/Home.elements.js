@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   max-width: 1300px;
   margin: 0 auto;
+  margin-top: 90px;
   width: 100vw;
 
   h1 {
@@ -15,6 +16,7 @@ export const BoxInput = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  z-index: 2;
 `;
 
 export const Input = styled.input`
@@ -34,6 +36,9 @@ export const Input = styled.input`
 `;
 
 export const Box = styled.div`
-  /* margin-top: 40px; */
-  /* margin-left: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 `;

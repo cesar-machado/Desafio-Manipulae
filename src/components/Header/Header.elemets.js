@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #5c0099;
   height: 90px;
   z-index: 999;
@@ -28,6 +31,10 @@ export const NavItem = styled.li`
 export const NavLink = styled(Link)`
   font-size: 22px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 
   &::after {
     content: "";

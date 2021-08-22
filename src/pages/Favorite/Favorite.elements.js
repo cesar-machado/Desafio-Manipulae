@@ -1,6 +1,26 @@
 import styled from "styled-components";
 
+export const Main = styled.main`
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 100vw;
+
+  h1 {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+`;
+
 export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+export const BoxList = styled.div`
   background: #01030d;
   width: 250px;
   height: 480px;
@@ -45,10 +65,11 @@ export const Text = styled.p`
   }
 `;
 
-export const FavBtn = styled.button`
+export const TrashBtn = styled.button`
   position: absolute;
   border: none;
   background: none;
   margin-left: 50px;
   margin-top: -5px;
+  cursor: pointer;
 `;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
 import { Div } from "./Player.elements";
 
-const useAudio = (url) => {
+const MusicPreview = (url) => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(false);
 
@@ -22,8 +22,8 @@ const useAudio = (url) => {
   return [playing, toggle];
 };
 
-const Player = ({ url }) => {
-  const [playing, toggle] = useAudio(url);
+export const Player = ({ url }) => {
+  const [playing, toggle] = MusicPreview(url);
 
   return (
     <Div>
@@ -37,5 +37,3 @@ const Player = ({ url }) => {
     </Div>
   );
 };
-
-export default Player;

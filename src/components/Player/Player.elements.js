@@ -6,11 +6,15 @@ export const Div = styled.div`
 
   button {
     border: none;
-    background: none;
+
     cursor: pointer;
 
     /* .play {
       font-size: 100px;
     } */
+
+    svg {
+      background: #01030d;
+    }
   }
 `;

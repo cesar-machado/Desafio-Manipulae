@@ -14,7 +14,7 @@ export function Header() {
         <img src={Logo} alt="logo" height="90" width="80" />
         <NavMenu>
           <NavItem>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Página Inícial</NavLink>
           </NavItem>
           <NavItem>
             <NavLink to="/favoritas">Músicas Favoritas</NavLink>

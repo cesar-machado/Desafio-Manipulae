@@ -1,19 +1,17 @@
-// import Player from "../Player/";
-import { useEffect, useState } from "react";
 import axios from "axios";
-
-import { Box } from "./Track.elements";
+import { useEffect, useState } from "react";
 import { TrackList } from "../TrackList/TrackList";
+
+import { Box, Container, Title } from "./Track.elements";
 
 export function Tracks() {
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
     axios({
       method: "GET",
-      url: "https://musicsioproxy.herokuapp.com/api.deezer.com/chart/",
+      url: "https://musicsioproxy.herokuapp.com/api.deezer.com/chart?index=0&limit=30",
     })
       .then((response) => {
-        console.log(response.data);
         setTracks(response.data.tracks.data);
       })
       .catch((err) => {
@@ -21,7 +19,8 @@ export function Tracks() {
       });
   }, []);
   return (
-    <>
+    <Container>
+      <Title>Top Músicas do Momento</Title>
       <Box>
         {tracks.map((track) => (
           <TrackList
@@ -33,27 +32,10 @@ export function Tracks() {
             albumTitle={track.album.title}
             duration={track.duration}
             url={track.preview}
+            link={track.link}
           />
         ))}
       </Box>
-    </>
+    </Container>
   );
 }
-
-// {tracks.map((track) => (
-//   <li key={track.title}>
-//     <div>
-//       <img src={track.album.cover_medium} alt="cover"></img>
-//       <Player url={track.preview} />
-//     </div>
-//     {track.artist.name} - {track.title}
-//     <p>
-//       Duração: {Math.round(track.duration / 60)}:
-//       {Math.round(track.duration % 60) < 10
-//         ? "0" + Math.round(track.duration % 60)
-//         : Math.round(track.duration % 60)}
-//       s
-//     </p>
-//   </li>
-// ))}
-// </ul>
