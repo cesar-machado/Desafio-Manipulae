@@ -71,3 +71,27 @@ export const Div = styled.div`
   gap: 20px;
   flex-wrap: wrap;
 `;
+
+export const BackButton = styled.div`
+  margin-top: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background-color: #7600c6;
+    border-radius: 10px;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+  span {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #fff;
+  }
+`;

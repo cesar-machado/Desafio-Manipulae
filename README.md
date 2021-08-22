@@ -1,44 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<h3 align="center">
+    <img alt="Logo" title="#logo" width="200px" height="200px" src="./src/assets/logo.png">
+    <br><br>
+    <br>
+</h3>
 
-## Available Scripts
+# Índice
 
-In the project directory, you can run:
+- [Sobre](#sobre)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Usar](#como-usar)
+  <br>
+  <a id="sobre"></a>
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O <strong>Vibes App</strong> é uma aplicação que foi desenvolvida para o desafio técnico da empresa Manipulae.<br>
 
-### `yarn test`
+A idéia do desafio é desenvolver uma aplicação WEB onde será consumida a [API da Deezer](https://developers.deezer.com/).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Quando você consome os dados da api, aparece na primeira tela as melhores músicas pelos usuários do Deezer, e você consegue ouvir um preview da musica, ver o album e ir para música completa. <br>
 
-### `yarn build`
+Você também consegue adicionar as sua músicas favoritas para página músicas favoritas, e você também pode pesquisar o artístas, álbuns e músicas.
+<br>
+Outro ponto, favoritar as músicas e exibir em uma lista as músicas favoritas pelo usuário.<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<a id="tecnologias-utilizadas"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnologias Utilizadas
 
-### `yarn eject`
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [React JS](https://pt-br.reactjs.org/) <br>
+  Foram utilizado aqui:
+  - react-dom
+  - react-icons
+  - react-redux
+  - react-router-dom
+  - axios
+  - redux
+  - styled-components
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a id="como-usar"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- ### **Pré-requisitos**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado na máquina
+  - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
 
-## Learn More
+1. Faça um clone :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+  $ git clone https://github.com/cesar-machado/Desafio-Manipulae.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Executando a Aplicação:
+
+```sh
+  # Instale as dependências
+  $ npm install ou yarn
+
+  # Inicie a aplicação React JS
+  $ cd desafio-manipulae
+  $ npm start ou yarn start
+```
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+<h4 align="center">
+    Feito com 💜 by <a href="https://www.linkedin.com/in/cesar-mach/" target="_blank">César Machado</a>
+</h4>

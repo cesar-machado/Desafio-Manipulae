@@ -2,8 +2,17 @@ import { useState } from "react";
 
 import axios from "axios";
 import { Tracks } from "../../components/Tracks/Tracks";
-import { Box, BoxInput, Button, Div, Input, Main } from "./Home.elements";
+import {
+  BackButton,
+  Box,
+  BoxInput,
+  Button,
+  Div,
+  Input,
+  Main,
+} from "./Home.elements";
 import { SearchList } from "../../components/SearchList/SearchList";
+import { FaArrowLeft } from "react-icons/fa";
 
 export function Home() {
   const [search, setSearch] = useState([]);
@@ -15,7 +24,6 @@ export function Home() {
       const url = `https://musicsioproxy.herokuapp.com/api.deezer.com/search?q=${query}`;
       const res = await axios.get(url);
       setSearch(res.data);
-      console.log(res);
     } catch (e) {
       console.log(e);
     }
@@ -47,8 +55,15 @@ export function Home() {
             </Button>
           </form>
         </BoxInput>
+
         {submit === true ? (
           <Box>
+            <BackButton>
+              <button onClick={() => setSubmit(false)}>
+                <FaArrowLeft />
+                <span>Voltar</span>
+              </button>
+            </BackButton>
             <h1>
               Resultado da sua pesquisa sobre : <span>{query}</span>
             </h1>
