@@ -1,8 +1,8 @@
-<h3 align="center">
-    <img alt="Logo" title="#logo" width="200px" height="200px" src="./logo.png">
+<div align="center">
+    <img src="./src/assets/logo.png" alt="Logo"  width="200px" height="200px" >
     <br><br>
     <br>
-</h3>
+</div>
 
 # Índice
 
