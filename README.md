@@ -22,7 +22,7 @@ A idéia do desafio é desenvolver uma aplicação WEB onde será consumida a [A
 
 Quando você consome os dados da api, aparece na primeira tela as melhores músicas pelos usuários do Deezer, e você consegue ouvir um preview da musica, ver o album e ir para música completa. <br>
 
-Você também consegue adicionar as sua músicas favoritas para página músicas favoritas, e você também pode pesquisar por artístas, álbuns e músicas.<br>
+Você também consegue adicionar as suas músicas favoritas para página músicas favoritas, e você também pode pesquisar por artístas, álbuns e músicas.<br>
 
 <br>
 
@@ -33,14 +33,13 @@ Você também consegue adicionar as sua músicas favoritas para página músicas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [React JS](https://pt-br.reactjs.org/) <br>
-  Foram utilizado aqui:
-  - react-dom
-  - react-icons
-  - react-redux
-  - react-router-dom
-  - axios
-  - redux
-  - styled-components
+- react-dom
+- react-icons
+- react-redux
+- react-router-dom
+- axios
+- redux
+- styled-components
 
 <a id="como-usar"></a>
 
@@ -65,8 +64,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   $ cd desafio-manipulae
   $ npm start ou yarn start
 ```
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 <h4 align="center">
     Feito com 💜 by <a href="https://www.linkedin.com/in/cesar-mach/" target="_blank">César Machado</a>
