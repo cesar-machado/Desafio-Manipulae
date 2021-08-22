@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import axios from "axios";
 import { Tracks } from "../../components/Tracks/Tracks";
@@ -17,13 +17,26 @@ import { FaArrowLeft } from "react-icons/fa";
 export function Home() {
   const [search, setSearch] = useState([]);
   const [query, setQuery] = useState("eminem");
+  const [index, setIndex] = useState(0);
   const [submit, setSubmit] = useState(false);
 
   const searchTracks = async () => {
     try {
-      const url = `https://musicsioproxy.herokuapp.com/api.deezer.com/search?q=${query}`;
+      const url = `https://musicsioproxy.herokuapp.com/api.deezer.com/search?q=${query}&index=${index}`;
       const res = await axios.get(url);
       setSearch(res.data);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleClick = async () => {
+    try {
+      const url = `https://musicsioproxy.herokuapp.com/api.deezer.com/search?q=${query}&index=${index}`;
+      const res = await axios.get(url);
+      setSearch(res.data);
+      setIndex(index + 10);
     } catch (e) {
       console.log(e);
     }
@@ -73,6 +86,7 @@ export function Home() {
                 <SearchList props={tracks} key={tracks.id} />
               ))}
             </Div>
+            <button onClick={handleClick}>Carregar Mais</button>
           </Box>
         ) : (
           <Tracks />

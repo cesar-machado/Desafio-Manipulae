@@ -22,9 +22,7 @@ A idéia do desafio é desenvolver uma aplicação WEB onde será consumida a [A
 
 Quando você consome os dados da api, aparece na primeira tela as melhores músicas pelos usuários do Deezer, e você consegue ouvir um preview da musica, ver o album e ir para música completa. <br>
 
-Você também consegue adicionar as sua músicas favoritas para página músicas favoritas, e você também pode pesquisar o artístas, álbuns e músicas.
-<br>
-Outro ponto, favoritar as músicas e exibir em uma lista as músicas favoritas pelo usuário.<br>
+Você também consegue adicionar as sua músicas favoritas para página músicas favoritas, e você também pode pesquisar por artístas, álbuns e músicas.<br>
 
 <br>
 

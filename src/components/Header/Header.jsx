@@ -6,6 +6,7 @@ import {
   NavMenu,
 } from "./Header.elemets";
 import Logo from "../../assets/Logo.png";
+import { useState } from "react";
 
 export function Header() {
   return (
