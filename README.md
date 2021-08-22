@@ -16,7 +16,7 @@
 
 ## Sobre
 
-O <strong>Vibes App</strong> é uma aplicação que foi desenvolvida para o desafio técnico da empresa Manipulae.<br>
+O <strong>Vibes App</strong> é uma aplicação que foi desenvolvida para o desafio prático da empresa Manipulae.<br>
 
 A idéia do desafio é desenvolver uma aplicação WEB onde será consumida a [API da Deezer](https://developers.deezer.com/).
 
