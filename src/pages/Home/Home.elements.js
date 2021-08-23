@@ -17,6 +17,10 @@ export const BoxInput = styled.div`
   display: flex;
   justify-content: center;
   z-index: 2;
+
+  @media (max-width: 641px) {
+    flex-direction: column;
+  }
 `;
 
 export const Button = styled.button`
@@ -29,6 +33,10 @@ export const Button = styled.button`
   transition: filter 0.2s;
   font-weight: 600;
   font-size: 16px;
+
+  @media (max-width: 641px) {
+    margin-left: 280px;
+  }
 
   &:hover {
     filter: brightness(0.8);
@@ -48,6 +56,12 @@ export const Input = styled.input`
   &:focus {
     border: 4px solid #ffd500;
     border-radius: 10px;
+  }
+
+  @media (max-width: 641px) {
+    margin-bottom: 10px;
+    width: 400px;
+    margin-left: 5px;
   }
 `;
 
