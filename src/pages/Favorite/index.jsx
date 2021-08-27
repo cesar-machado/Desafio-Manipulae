@@ -15,7 +15,7 @@ import {
 } from "./Favorite.elements";
 
 export function Favorite() {
-  const favoriteTracks = useSelector((state) => state.favoriteTracks);
+  const favorite = useSelector((state) => state.favoriteTrack.tracks);
 
   const dispatch = useDispatch();
 
@@ -23,25 +23,25 @@ export function Favorite() {
     <Main>
       <h1>Músicas Favoritas</h1>
       <Box>
-        {favoriteTracks?.map((track) => (
-          <BoxList key={track.title}>
-            <img src={track.album} alt="cover" />
-            <Player url={track.url} />
+        {favorite?.map((itens) => (
+          <BoxList key={itens.track.title}>
+            <img src={itens.track.album} alt="cover" />
+            <Player url={itens.track.url} />
             <TrashBtn
               onClick={() => {
-                window.alert(track.title + " foi removido dos favoritos");
-                dispatch(removeFavoriteTrack(track));
+                window.alert(itens.track.title + " foi removido dos favoritos");
+                dispatch(removeFavoriteTrack(itens));
               }}
             >
               <RiDeleteBin6Line size={35} />
             </TrashBtn>
             <Content>
-              <Text> Artísta: {track.artist}</Text>
-              <Text> Música: {track.title}</Text>
-              <Text> Album : {track.albumTitle}</Text>
-              <Text>Duração: {getConvertDuration(track.duration)}s</Text>
+              <Text> Artísta: {itens.track.artist}</Text>
+              <Text> Música: {itens.track.title}</Text>
+              <Text> Album : {itens.track.albumTitle}</Text>
+              <Text>Duração: {getConvertDuration(itens.track.duration)}s</Text>
               <Text>
-                <a href={track.link} target="_blank" rel="noreferrer">
+                <a href={itens.track.link} target="_blank" rel="noreferrer">
                   Música Completa
                 </a>
               </Text>

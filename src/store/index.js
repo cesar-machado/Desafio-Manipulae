@@ -1,10 +1,8 @@
-import { combineReducers, createStore } from "@reduxjs/toolkit";
-import FavoriteTrackReducer from "./modules/FavoriteTrack/reduce";
+import { createStore } from "@reduxjs/toolkit";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const rootReducer = combineReducers({
-  favoriteTracks: FavoriteTrackReducer,
-});
+import rootReducer from "./modules/rootReducer";
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;

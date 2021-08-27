@@ -1,6 +1,6 @@
-import { useState } from "react";
-
+import { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
+
 import { getConvertDuration } from "../../utils/convertDuration";
 import { addFavoriteTrack } from "../../store/modules/FavoriteTrack/actions";
 
@@ -12,13 +12,17 @@ import { Box, Content, Text, FavBtn } from "./TrackLists.elements";
 export function TrackList(props) {
   const [favorite, setFavorite] = useState(false);
   const dispatch = useDispatch();
+
+  const handleAddFavoriteTrack = useCallback(() => {
+    dispatch(addFavoriteTrack(props));
+  }, [dispatch, props]);
   return (
     <Box>
       <img src={props.album} alt={props.title} />
       <Player url={props.url} />
       <FavBtn
         onClick={() => {
-          dispatch(addFavoriteTrack(props));
+          handleAddFavoriteTrack(props);
           setFavorite(!favorite);
         }}
       >

@@ -1,13 +1,17 @@
-export function addFavoriteTrack(track) {
+export function addFavoriteTrack(track, favorite) {
   return {
-    type: "addFavoriteTrack",
-    payload: track,
+    type: "ADD_FAVORITE_TRACK",
+    payload: {
+      track,
+    },
   };
 }
 
 export function removeFavoriteTrack(track) {
   return {
-    type: "removeFavoriteTrack",
-    payload: track,
+    type: "REMOVE_FAVORITE_TRACK",
+    payload: {
+      track,
+    },
   };
 }

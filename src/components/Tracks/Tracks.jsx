@@ -9,7 +9,7 @@ export function Tracks() {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "https://musicsioproxy.herokuapp.com/api.deezer.com/chart?index=0&limit=30",
+      url: "https://api.deezer.com/chart?index=0&limit=30",
     })
       .then((response) => {
         setTracks(response.data.tracks.data);

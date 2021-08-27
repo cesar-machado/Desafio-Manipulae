@@ -11,7 +11,8 @@ import { addFavoriteTrack } from "../../store/modules/FavoriteTrack/actions";
 export function SearchList(props) {
   const [favorite, setFavorite] = useState(false);
   const dispatch = useDispatch();
-  // console.log(props);
+  console.log(props);
+
   return (
     <Box key={props.props.title}>
       <img src={props.props.album.cover_medium} alt={props.props.title} />
