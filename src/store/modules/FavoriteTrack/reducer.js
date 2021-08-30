@@ -10,17 +10,27 @@ function favoriteTrack(state = INITIAL_STATE, action) {
       case "ADD_FAVORITE_TRACK": {
         const { track } = action.payload;
 
-        draft.tracks.push({
-          track,
-        });
+        const trackFavorite = draft.tracks.findIndex(
+          (item) => item.track.title === track.title
+        );
+
+        if (trackFavorite >= 0) {
+          // console.log(trackFavorite);
+        } else {
+          draft.tracks.push({
+            track,
+          });
+        }
 
         break;
       }
       case "REMOVE_FAVORITE_TRACK":
         const { track } = action.payload;
+
         const trackRemoved = state.tracks.filter(
-          (value) => value.id === track.id
+          (value) => value.track.title !== track.title
         );
+
         return trackRemoved;
 
       default: {

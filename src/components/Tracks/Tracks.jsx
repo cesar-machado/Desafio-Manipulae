@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import api from "../../services/api";
 import { TrackList } from "../TrackList/TrackList";
 
 import { Box, Container, Title } from "./Track.elements";
@@ -7,10 +7,8 @@ import { Box, Container, Title } from "./Track.elements";
 export function Tracks() {
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
-    axios({
-      method: "GET",
-      url: "https://musicsioproxy.herokuapp.com/api.deezer.com/chart?index=0&limit=30",
-    })
+    api
+      .get("/chart?index=0&limit=30")
       .then((response) => {
         setTracks(response.data.tracks.data);
       })
